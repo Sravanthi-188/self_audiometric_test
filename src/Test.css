@@ -1,0 +1,122 @@
+/* Overall container */
+.test-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 20px;
+  background-color: #fadbbd;
+  font-family: Arial, sans-serif;
+}
+
+/* Instructions Panel */
+.instructions {
+  width: 30%;
+  background-color: #3bbdcf;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.instructions h2 {
+  color: red;
+}
+
+.instructions ol {
+  padding-left: 20px;
+}
+
+/* Grid Container */
+.grid-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grid layout for both header and rows */
+.grid {
+  display: grid;
+  grid-template-columns: 50px repeat(7, 60px); /* First column for Y-axis labels, rest for X-axis */
+  align-items: center;
+}
+
+/* Placeholder for aligning Y-axis with the grid */
+.y-axis-label-placeholder {
+  width: 50px;
+}
+
+/* X-Axis Labels */
+.grid-header-item {
+  text-align: center;
+  font-weight: bold;
+  color: #065f7c;
+  width: 60px;
+}
+
+/* Y-Axis Labels */
+.y-axis-label {
+  width: 50px;
+  text-align: right;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #065f7c;
+}
+
+/* Grid Cells */
+.grid-cell {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.grid-cell input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Selected Values Display */
+.selected-values {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+
+/* Buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.test-ear-button,
+.generate-report-button {
+  background-color: #3bbdcf;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+}
+
+.test-ear-button:hover,
+.generate-report-button:hover {
+  background-color: #1d93a1;
+}
+:disabled{
+  background-color: aliceblue;
+}
