@@ -19,7 +19,7 @@
 }
 
 /* Blinking Alert Effect for h2 */
-h2 {
+.sec-title {
   color: #D32F2F; /* Alert Red */
   font-size: 32px;
   margin-bottom: 20px;

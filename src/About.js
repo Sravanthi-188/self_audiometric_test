@@ -10,32 +10,32 @@ const About = () => {
         <h1 className="text-3xl font-bold text-center mb-4 text-blue-600">About the Self-Audiometric Test</h1>
         
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          This website provides a self-audiometric test using **Pure-Tone Audiometry**, 
+          This website provides a self-audiometric test using Pure-Tone Audiometry, 
           allowing users to evaluate their hearing thresholds. The test involves listening to 
-          tones at different **frequencies and volume levels** and plotting results on an **audiogram**.
+          tones at different frequencies and volume levels and plotting results on an audiogram.
         </p>
 
         <h2 className="text-2xl font-semibold mt-4 mb-2 text-gray-800">🔹 How It Works:</h2>
         <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed mb-4">
-          <li>Select **Left**, **Right**, or **Both** ears for testing.</li>
-          <li>Listen to tones at various **frequencies (125Hz - 8000Hz)**.</li>
-          <li>Mark the **lowest audible volume (threshold)** for each frequency.</li>
+          <li>Select Left, Right, or Both ears for testing.</li>
+          <li>Listen to tones at various frequencies (125Hz - 8000Hz).</li>
+          <li>Mark the lowest audible volume (threshold) for each frequency.</li>
           <li>Your audiogram is generated, indicating potential hearing loss.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-4 mb-2 text-gray-800">🔹 Features:</h2>
         <ul className="list-disc list-inside text-gray-700 text-lg leading-relaxed mb-4">
-          <li>**Pure-Tone Audiometry** based testing.</li>
-          <li>Ability to **select ears (left/right)**.</li>
-          <li>Generates **audiogram graph** dynamically.</li>
-          <li>**Downloadable test results** for future reference.</li>
-          <li>Ensures a **quiet environment** by detecting ambient noise.</li>
+          <li>Pure-Tone Audiometry based testing.</li>
+          <li>Ability to select ears (left/right).</li>
+          <li>Generates audiogram graph dynamically.</li>
+          <li>Downloadable test results for future reference.</li>
+          <li>Ensures a quiet environment by detecting ambient noise.</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-4 mb-2 text-gray-800">🔹 Important Note:</h2>
         <p className="text-gray-700 text-lg leading-relaxed mb-4">
-          For **accurate results**, use **wired or Bluetooth headphones** in a **quiet environment**.  
-          This test is **not a medical diagnosis**—consult an audiologist if you suspect hearing loss.
+          For accurate results, use wired or Bluetooth headphones in a quiet environment.  
+          This test is not a medical diagnosis—consult an audiologist if you suspect hearing loss.
         </p>
 
         <h2 className="text-2xl font-semibold mt-4 mb-2 text-gray-800">📩 Contact Us:</h2>

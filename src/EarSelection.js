@@ -68,7 +68,7 @@ const EarSelection = () => {
   return (
     <div className="earselection-wrapper">
       <div className="container">
-        <h2>Select Ear for Testing</h2>
+        <h2 className="sec-title">Select Ear for Testing</h2>
 
         <div className="ear-selection">
           <div className={`ear-option ${selectedEar === "Left" ? "selected" : ""}`} onClick={() => setSelectedEar("Left")}>
