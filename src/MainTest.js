@@ -10,7 +10,6 @@ const Test = () => {
   const [selectedEar, setSelectedEar] = useState(localStorage.getItem("selectedEar") || "Both");
   const initialEar = localStorage.getItem("selectedEar") || "Both";
 
-
   const [selectedPointsLeft, setSelectedPointsLeft] = useState({});
   const [selectedPointsRight, setSelectedPointsRight] = useState({});
   const [results, setResults] = useState({ left: [], right: [] });
@@ -95,7 +94,6 @@ const Test = () => {
     setSelectedEar(newEar);
     localStorage.setItem("selectedEar", newEar);
 
-    // Reset only new ear's data
     if (newEar === "Left") {
       setSelectedPointsLeft({});
       localStorage.removeItem("leftEarData");
@@ -105,6 +103,18 @@ const Test = () => {
       localStorage.removeItem("rightEarData");
       setResults((prev) => ({ ...prev, right: [] }));
     }
+  };
+
+  const isEarTestComplete = (ear) => {
+    const points = ear === "left" ? selectedPointsLeft : selectedPointsRight;
+    return frequencies.every((freq) => points.hasOwnProperty(freq));
+  };
+
+  const isTestComplete = () => {
+    if (selectedEar === "Both") {
+      return isEarTestComplete("left") && isEarTestComplete("right");
+    }
+    return isEarTestComplete(selectedEar.toLowerCase());
   };
 
   return (
@@ -154,14 +164,19 @@ const Test = () => {
       {/* Buttons */}
       <div className="button-container">
         {selectedEar !== "Both" && (
-            <button className="test-ear-button" onClick={handleTestOtherEar}>
-          {selectedEar === "Left" ? "Test Right Ear" : "Test Left Ear"}
-        </button>
+          <button
+            className="test-ear-button"
+            onClick={handleTestOtherEar}
+            disabled={!isTestComplete()}
+          >
+            {selectedEar === "Left" ? "Test Right Ear" : "Test Left Ear"}
+          </button>
         )}
 
         <button
           className="generate-report-button"
           onClick={() => navigate("/audiogram", { state: { results } })}
+          disabled={!isTestComplete()}
         >
           Generate Report
         </button>

@@ -103,8 +103,8 @@ const Audiometry = () => {
   }, [leftEarData, rightEarData]);
 
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
-      <h2>Audiogram</h2>
+    <div style={{ textAlign: "center" }}>
+      <h2 style={{marginTop:"80px"}}>Audiogram</h2>
       <div
         id="audiogram-chart"
         style={{
@@ -113,8 +113,10 @@ const Audiometry = () => {
           marginBottom: "20px",
           borderRadius: "10px",
           boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-          width: "100%",
+          alignContent:"center",
+          width: "70%",
           height: "400px", // Set a height
+          marginLeft:"190px"
         }}
       >
         <Line data={data} options={options} />
